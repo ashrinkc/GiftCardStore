@@ -1,0 +1,228 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- This specifies that the schema's elements and data types are from the http://www.w3.org/2001/XMLSchema namespace.
+It also defines that elements and data types from the http://www.w3.org/2001/XMLSchema namespace should have an xs prefix.-->
+  <xs:element name="STORE">
+    <xs:complexType> <!-- complex type is used as it contains other elements and attributes-->
+      <xs:sequence>
+        <xs:element name="storeDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="storeTitle">
+                <xs:complexType>
+                  <xs:sequence> <!--The sequence element determines the order in which the child elements must appear.-->
+                    <xs:element name="store_name" type="xs:string"/>
+                    <xs:element name="logo"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="storeDetail">
+                <xs:complexType>
+                  <xs:sequence> <!--The sequence element determines the order in which the child elements must appear.-->
+                    <xs:element name="store_address" type="xs:string"/>
+                    <xs:element name="telephoneNumber" type="xs:string"/>
+                    <xs:element name="store_websiteAddress" type="xs:string"/>
+                    <xs:element name="store_email">
+                      <xs:simpleType> 
+                        <xs:restriction base="xs:string"> 
+                            <xs:pattern value="[^@]+@[^\.]+\..+"/>  <!--pattern constraint for email-->
+                        </xs:restriction> 
+                      </xs:simpleType> 
+                    </xs:element>
+                    <xs:element name="notes" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Giftcard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="digital">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Card">
+                      <xs:complexType> <!-- complex type is used as it contains other elements and attributes-->
+                        <xs:sequence>
+                          <xs:element name="name">
+                            <xs:complexType>
+                              <xs:simpleContent> <!--Only attributes and text content are allowed in the elements content type.-->
+                                <xs:extension base="xs:string">  <!--declaring a type that extends MainParameter type.-->
+                                  <xs:attribute name="type" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">  <!--restricting to select only digital or physical-->
+                                        <xs:enumeration value="digital"/>
+                                        <xs:enumeration value="physical"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="from" type="xs:string"/>
+                          <xs:element name="type">
+                            <xs:complexType>
+                              <xs:simpleContent> <!--Only attributes and text content are allowed in the elements content type.-->
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="codenumber" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="cost" type="xs:string"/>
+                          <xs:element name="balance" type="xs:string"/>
+                          <xs:element name="redeemCode">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="codeOf" type="xs:string" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="validity">
+                            <xs:complexType> <!-- complex type is used as it contains other elements and attributes-->
+                              <xs:sequence>
+                                <xs:element name="manufactured_date" type="xs:string"/>
+                                <xs:element name="expiry_date" type="xs:string"/>
+                              </xs:sequence>
+                              <xs:attribute name="cardUsability">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+				 		 	 	 	 	                <xs:enumeration value="1 year"/>
+                                    <xs:enumeration value="2 year"/>
+                                    <xs:enumeration value="3 year"/>
+				 		 	    	              </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="number_of_users" type="xs:integer"/>
+                          <xs:element name="discount_vouchers">
+                            <xs:complexType>
+                              <xs:sequence> <!--The sequence element determines the order in which the child elements must appear.-->
+                                <xs:element name="number_of_vouchers" type="xs:integer"/>
+                                <xs:element name="discounted_percentage" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="rating">
+                            <xs:complexType>
+                              <xs:simpleContent> <!--Only attributes and text content are allowed in the elements content type.-->
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="maxRating" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:integer">
+				 		 	 	 	 	                    <xs:minInclusive value="1"/> <!--restriction so that min value cannot be less that 1-->
+                                        <xs:maxInclusive value="5"/> <!--restriction so that max value cannot be more that 5-->
+				 		 	    	                  </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="desc" type="xs:string"/>
+                          <xs:element name="websiteAddress" type="xs:string"/>
+                          <xs:element name="email">
+                            <xs:simpleType> <!--Only attributes and text content are allowed in the elements content type.-->
+                              <xs:restriction base="xs:string"> 
+                                <xs:pattern value="[^@]+@[^\.]+\..+"/> <!--pattern constraint for email-->
+                              </xs:restriction> 
+                            </xs:simpleType> 
+                          </xs:element>
+                          <xs:element minOccurs="0" name="available_for" type="xs:string"/>
+                          <xs:element name="quantity" type="xs:integer"/>
+                          <xs:element minOccurs="0" name="refundable_within" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="giftOf" type="xs:string" fixed="sto1"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="physical">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Card">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name">
+                            <xs:complexType>
+                              <xs:simpleContent> <!--Only attributes and text content are allowed in the elements content type.-->
+                                <xs:extension base="xs:string"> <!--declaring a type that extends MainParameter type.-->
+                                  <xs:attribute name="type" type="xs:string" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="from" type="xs:string"/>
+                          <xs:element name="type">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                  <xs:enumeration value="Digital"/>
+                                  <xs:enumeration value="Physical"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="cost" type="xs:string"/>
+                          <xs:element name="balance" type="xs:string"/>
+                          <xs:element name="validity">
+                            <xs:complexType> <!-- complex type is used as it contains other elements and attributes-->
+                              <xs:sequence>
+                                <xs:element name="manufactured_date" type="xs:string"/>
+                                <xs:element name="expiry_date" type="xs:string"/>
+                              </xs:sequence>
+                              <xs:attribute name="cardUsability" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="number_of_users" type="xs:integer"/>
+                          <xs:element name="discount_vouchers">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="number_of_vouchers" type="xs:integer"/>
+                                <xs:element name="discounted_percentage" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="color" type="xs:string"/>
+                          <xs:element minOccurs="0" name="customize">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="design" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="rating">
+                            <xs:complexType> <!-- complex type is used as it contains other elements and attributes-->
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">  <!--declaring a type that extends MainParameter type.-->
+                                  <xs:attribute name="maxRating" type="xs:integer" use="optional" default="5"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="desc" type="xs:string"/>
+                          <xs:element name="websiteAddress" type="xs:string"/>
+                          <xs:element name="email" type="xs:string"/>
+                          <xs:element minOccurs="0" name="payment_type" type="xs:string"/>
+                          <xs:element name="quantity" type="xs:integer"/>
+                          <xs:element minOccurs="0" name="refundable_within" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="giftOf" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="storeID" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> <!--end of the schema-->

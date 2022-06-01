@@ -1,0 +1,538 @@
+
+STORE{
+    display: flex; /* it sets flexible length on flexible items */
+    flex-direction: column; 
+    align-items: center; /* aligns the items to center */
+    background-image: url(Images/back3.jpg); /* displaying background image */
+    background-color: #7EB2DD; /* changing background color */
+}
+
+store_name
+{
+    /* animation for storename */
+    text-transform: uppercase;
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+    ); /* different colors to be used for the store name */
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite; /* animation for the text */
+    display: inline-block;
+    font-size: 190px; /* setting the size of the fonts */
+}
+
+/* it specifies the animation code */
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+store_address,telephoneNumber,store_websiteAddress,store_email {
+    color: white; /* setting the text color to white */
+    position: relative;
+    display: inline-block; /* it is placed in an inline element */
+    animation: flip 1s infinite; /* animation to flip infinitely*/
+    animation-delay: calc(.2s * var(--i))
+    
+}
+
+/* it specifies the animation code */
+@keyframes flip {
+    0%,80% {
+    transform: rotateY(360deg) 
+} /* animation to flip */
+}
+
+notes{
+    display:block;
+    width: 70vw; /* setting the width to 70vw */
+    background-color: #03000c;
+    color:#f00808; /* setting the text color to red */
+    padding: 10px; /* it controls space inside an element */
+    font-size: 20pt; 
+    border: 4px solid rgb(126, 2, 2); /* providing boder for the container */
+    margin-bottom: 30px; /* it controls bottom space outside an element */
+    margin-top: 5px; /* it controls top space outside an element */
+}
+
+logo{
+    background-image: url(Images/logo.jpg); /* displaying logo image */
+    background-size: contain; /* resizes the background image to make sure it remain fully visible */
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    height: 29vh;
+    width: 13vw;
+    float: right; /* floating the image to right */
+    margin-left: 6px; /* it controls left space outside an element */
+}
+
+logo:hover,notes:hover{
+    animation: bounce 1s; /* animation for bounce */
+}
+discount_vouchers{
+    display: flex;
+    flex-direction: column;
+}
+
+storeDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    font-size: 2vw;
+}
+
+store_name{
+    font-size: 10vh;
+    margin-top: 4vw;
+    align-self: center; /* aligning items to center */
+    margin-left: 8vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* setting font family */
+}
+
+Giftcard{
+    display: flex;
+    flex-direction: column;
+    gap: 9vh; /* gap between the items inside flex box */
+    align-items: center; /* aligning items to center */
+    margin-top: 100px;
+}
+
+storeDetails{
+    font-family: Century Gothic; /* setting font family */
+    font-size: 15px; /* setting font size */
+    color: black; /* setting font color */
+    background-image: url(Images/back2.jpg); /* displaying background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* aligning items to center */
+    width: 100vw;
+}
+
+rating{
+    color: rgba(3, 250, 36, 0.815);
+    font-family: serif; /* setting font family */
+    font-size: 3vh; /* setting font size */
+}
+
+expiry_date{
+    color: rgb(255, 0, 0);
+    font-family: serif; /* setting font family */
+    font-size: 3vh;
+}
+
+name{
+    font-family: "Fantasy",Papyrus; /* setting font family */
+    color: red;
+    font-size: 8vh; /* setting font size */
+}
+
+validity{
+    display: flex;
+    flex-direction: column;
+}
+
+Card{
+    display: flex;
+    flex-direction: column;
+}
+
+cardInfo{
+    display: flex;
+}
+
+name::before{
+    content: "Name: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+from::before{
+    content: "From: ";
+}
+
+type::before{
+    content: "Type: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+cost::before{
+    content: "Cost: ";
+}
+
+refundable_within::before{
+    content: "Refundable within: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+design::before{
+    content: "Additional design: ";
+}
+
+color::before{
+    content: "Optional color: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+balance::before{
+    content: "Balance: ";
+}
+
+manufactured_date::before{
+    content: "Manufactured date: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+expiry_date::before{
+    content: "Expiry date: ";
+}
+
+number_of_users::before{
+    content: "Number of users: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+number_of_vouchers::before{
+    content: "Number of discount vouchers: ";
+}
+
+discounted_percentage::before{
+    content: "discounted_percentage: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+rating::before{
+    content: "Rating: ";
+}
+
+payment_type::before{
+    content: "Payment type: ";
+}
+
+redeemCode::before{
+    content: "Reedem Code: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+desc::before{
+    content: "Description: ";
+}
+
+websiteAddress::before{
+    content: "Website: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+email::before{
+    content: "Email: ";
+}
+
+available_for::before{
+    content: "Payment type: "; /*::before creates a pseudo-element that is the first child of the selected element.*/
+}
+
+quantity::before{
+    content: "Quantity: ";
+}
+
+digital,physical{
+    background-color: white;
+    border-radius: 3%; /*rounds the corners*/
+    width: 90vw;
+    margin-bottom: 5vh;
+
+}
+
+#a2{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/itunes.png); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+}
+
+#a1{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/chipgif.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 1vw;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    background-color: white;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+}
+
+/*using list*/
+from,type,cost,balance,redeemCode,manufactured_date,expiry_date,number_of_users,number_of_vouchers,
+discounted_percentage,rating,desc,websiteAddress,email,available_for,quantity,refundable_within,payment_type,color,design{
+    display: list-item;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#a3{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 3%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/starbucks.jpg); /* displaying card image */
+    background-size: 350px 420px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 1vw;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a4{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/target.png); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a5{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 1%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/steam.jpg); /* displaying card image */
+    background-size: 350px 430px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 1vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+
+#a7{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 3%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/spotify.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a8{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/amazon.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a9{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/playstation.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh; 
+    border: 6px solid rgb(15, 15, 15);  /* creating border for the container */
+    background-color: white;
+}
+
+#a10{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/tacobell.png); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+    height: 80vh;
+}
+
+#a11{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 3%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/visa.png); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a12{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/netflix.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a13{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 3%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/xbox.png); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a14{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/nintendo.jpg); /* displaying card image */
+    background-size: 350px 460px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+}
+
+#a15{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 2%); 
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/ikea.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    background-position-y: 0.5vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+#a16{
+    font-family: "Brush Script MT", cursive; /* setting font family */
+    color: hsl(0, 100%, 1%);
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    background-image: url(Images/subway.jpg); /* displaying card image */
+    background-size: 350px 450px;
+    background-repeat: no-repeat; /* restraining the background image from repeating */
+    background-position-x: 130vh;
+    border-radius: 3%; /*rounds the corners*/
+    height: 80vh;
+    border: 6px solid rgb(15, 15, 15); /* creating border for the container */
+    background-color: white;
+}
+
+/* it specifies the animation code */
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    /* animation code to bounce */
+  }
+
+
+#a1:hover, #a2:hover, #a3:hover, #a4:hover, #a5:hover, #a6:hover, #a7:hover, #a8:hover, #a9:hover, #a10:hover, #a11:hover, #a12:hover, #a13:hover, #a14:hover, #a15:hover, #a16:hover{
+    animation: bounce 1s; /* animation for bounce on hover*/
+    cursor: pointer; /* changing the way the cursor looks on hover*/
+    background-image: url(Images/black.jpg); /* displaying background image on hover */
+    background-position: 0%;
+    background-size: cover;
+    color: white; /* setting text color to white */
+    font-family: 'Courier New', Courier, monospace; /* setting font family */
+    border: 7px solid rgb(8, 242, 78); /* creating border for the container */
+}
+
+
+
+

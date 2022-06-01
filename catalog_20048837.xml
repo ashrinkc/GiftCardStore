@@ -1,0 +1,465 @@
+<?xml  version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Linking css to my xml-->
+<?xml-stylesheet type="text/css" href="catalog_20048837.css"?>
+<!--Refrencing xml schema-->
+<STORE storeID="sto1" xsi:noNamespaceSchemaLocation="catalog_20048837.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <storeDetails>
+        <storeTitle>
+            <store_name>Ashrin Gift Store</store_name> <!--name of the store-->
+            <logo/>
+        </storeTitle>
+        <storeDetail>
+            <store_address>
+                UK, London
+            </store_address> <!--address of the store-->
+            <telephoneNumber>(+44 20) 555-1812</telephoneNumber> <!--number of the store-->
+            <store_websiteAddress>http://www.ashringiftstore.com</store_websiteAddress>
+            <store_email>dio@nhs.net</store_email> <!--email of the store-->
+            <notes> <!--about the store-->
+            <![CDATA[
+            Ashrin gift store in London, United Kingdom sells digital gift cards. A gift card is
+            a form of payment that can be used to make purchases at retail stores, gas stations,
+            restaurants and other locations.
+            ]]>
+            </notes>
+        </storeDetail>
+    </storeDetails>
+
+        <Giftcard>
+        <!--15 different cards including both physical and digital are present inside giftcard-->
+                <digital>
+                    <Card id="a1" giftOf="sto1">
+                        <name type="digital">Chipotle gift card</name> <!--name of the gift card-->
+                        <from>Chiptole</from> <!--from whom the card is-->
+                        <type codenumber="0PO12L">Digital</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$150</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a1">0PO12L</redeemCode>
+                        <validity cardUsability="2 year">
+                            <manufactured_date>1/1/2020</manufactured_date>
+                            <expiry_date>1/1/2022</expiry_date>
+                        </validity> <!--valid date of the card-->
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">3.5</rating>
+                        <desc>
+                            Give Chipotle Gift Cards to friends to treat them to delightful Mexican-themed
+                            food that comes from farms, not factories.
+                        </desc>
+                        <websiteAddress>http://www.chipotle.com</websiteAddress>
+                        <email>chi@nhs.net</email>
+                        <available_for>Full payment &amp; Half payment</available_for>  <!--card availibility type-->
+                        <quantity>3</quantity>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a2" giftOf="sto1">
+                        <name type="digital">iTunes gift card</name> <!--name of the gift card-->
+                        <from>Apple</from> <!--from whom the card is-->
+                        <type codenumber="0P1kO">Digital</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$100</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a2">0P1kO</redeemCode>
+                        <validity cardUsability="2 year">
+                            <manufactured_date>10/11/2020</manufactured_date>
+                            <expiry_date>10/11/2022</expiry_date>
+                        </validity>
+                        <number_of_users>2</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">3</rating>
+                        <desc>
+                            Apple Gift Cards are solely for the purchase of goods and services
+                            from the Apple Store or other apple services.
+                        </desc>
+                        <websiteAddress>http://www.itunes.com</websiteAddress>
+                        <email>app@nhs.net</email>
+                        <quantity>2</quantity>
+                        <refundable_within>2 month</refundable_within>  <!--refundability time-->
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a3" giftOf="sto1">
+                        <name type="digital">Starbucks gift card</name> <!--name of the gift card-->
+                        <from>Starbucks</from> <!--from whom the card is-->
+                        <type codenumber="11PLNG">Digital</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$130</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a3">11PLNG</redeemCode>
+                        <validity cardUsability="1 year">
+                            <manufactured_date>9/12/2020</manufactured_date>
+                            <expiry_date>9/12/2021</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">4.5</rating> <!--rating of the card-->
+                        <desc>
+                            Give a Starbucks Card to show appreciation towards your customers, clients and team members.
+                        </desc>
+                        <websiteAddress>http://www.starbucks.com</websiteAddress>
+                        <email>starbuck@nhs.net</email>
+                        <available_for>Full payment &amp; Half payment</available_for> 
+                        <quantity>3</quantity>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a4" giftOf="sto1">
+                        <name type="digital">Target gift card</name> <!--name of the gift card-->
+                        <from>Target</from> <!--from whom the card is-->
+                        <type codenumber="00P00N">Digital</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$140</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a4">00P00N</redeemCode>
+                        <validity cardUsability="3 year">
+                            <manufactured_date>5/3/2020</manufactured_date>
+                            <expiry_date>5/3/2023</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">3.5</rating>
+                         <desc>
+                            Shop Target for Specialty Gift Cards you will love at great low prices.
+                        </desc> <!--description of the card-->
+                        <websiteAddress>http://www.targer.com</websiteAddress>
+                        <email>target@nhs.net</email>
+                        <quantity>5</quantity>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a5" giftOf="sto1">
+                        <name type="digital">Steam gift card</name> <!--name of the gift card-->
+                        <from>Steam</from> <!--from whom the card is-->
+                        <type codenumber="A1I9N">Digital</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$100</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a5">A1I9N</redeemCode>
+                        <validity cardUsability="2 year">
+                            <manufactured_date>7/3/2020</manufactured_date>
+                            <expiry_date>7/3/2022</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">2</rating>
+                        <desc>
+                            Give the gift of more games with Steam Gift Cards.You can directly contribute to
+                            by digitally sending a gift card
+                        </desc>
+                        <websiteAddress>http://www.steam.com</websiteAddress> <!--official website of the card company-->
+                        <email>steam@nhs.net</email>
+                        <quantity>2</quantity>
+                        <refundable_within>1 month</refundable_within>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a7" giftOf="sto1">
+                        <name type="digital">Spotify gift card</name> <!--name of the gift card-->
+                        <from>Spotify</from> <!--from whom the card is-->
+                        <type codenumber="CC9VC">Digital</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$100</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a7">CC9VC</redeemCode>
+                        <validity cardUsability="2 year">
+                            <manufactured_date>2/1/2020</manufactured_date>
+                            <expiry_date>2/1/2022</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">5</rating>
+                        <desc>
+                            Spotify for Specialty Gift Cards you will love at great prices.
+                        </desc>
+                        <websiteAddress>http://www.walmart.com</websiteAddress>
+                        <email>spotify@nhs.net</email> <!--official email of the card company-->
+                        <quantity>1</quantity>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a8" giftOf="sto1">
+                        <name type="digital">Amazon gift card</name> <!--name of the gift card-->
+                        <from>Amazon</from> <!--from whom the card is-->
+                        <type codenumber="Q3Q3">Digital</type> <!--type of card-->
+                        <cost>$50</cost>
+                        <balance>$120</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a8">Q3Q3</redeemCode>
+                        <validity cardUsability="2 year">
+                            <manufactured_date>5/3/2020</manufactured_date>
+                            <expiry_date>5/3/2022</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">4.5</rating>
+                        <desc>
+                            A gift of choice Celebrate every occasion with your loved ones in a special way.
+                        </desc>
+                        <websiteAddress>http://www.amazon.com</websiteAddress>
+                        <email>amazon@nhs.net</email>
+                        <quantity>4</quantity> <!--quantity of the card-->
+                        <refundable_within>2 month</refundable_within>
+                    </Card>
+                </digital>
+
+                <digital>
+                    <Card id="a9" giftOf="sto1">
+                        <name type="digital">Playstation gift card</name> <!--name of the gift card-->
+                        <from>Playstation</from> <!--from whom the card is-->
+                        <type codenumber="WW0WW">Digital</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$150</balance> <!--balance of the card-->
+                        <redeemCode codeOf="a9">WW0WW</redeemCode>
+                        <validity cardUsability="3 year">
+                            <manufactured_date>10/11/2020</manufactured_date>
+                            <expiry_date>10/11/2023</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">3.5</rating>
+                        <desc>
+                            Buy a PlayStation Store gift card and they will email you
+                            a code to redeem via our digital store. 
+                        </desc>  <!--description of the card-->
+                        <websiteAddress>http://www.playstation.com</websiteAddress>
+                        <email>playsta@nhs.net</email>
+                        <available_for>Full payment &amp; Half payment</available_for> <!--availibility type-->
+                        <quantity>1</quantity>
+                    </Card>
+                </digital>
+
+                <physical>
+                    <Card id="a10" giftOf="sto1">
+                        <name type="physical">Taco bell gift card</name> <!--name of the gift card-->
+                        <from>Taco bell</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$100</balance> <!--balance of the card-->
+                        <validity cardUsability="3 year">
+                            <manufactured_date>10/11/2020</manufactured_date>
+                            <expiry_date>10/11/2023</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage> <!--discount percentage-->
+                        </discount_vouchers>
+                        <customize>
+                            <design>Pattern</design>
+                        </customize>
+                        <rating maxRating="5">3.5</rating>  <!--rating of the card-->
+                        <desc>
+                            Show your special ones some 
+                            love by treating them to their favorite menu items at Taco Bell.
+                        </desc>
+                        <websiteAddress>http://www.tacobell.com</websiteAddress>
+                        <email>tacobell@nhs.net</email>
+                        <quantity>4</quantity>
+                    </Card>
+                </physical>
+
+                <physical>
+                    <Card id="a11" giftOf="sto1">
+                        <name type="physical">Visa gift card</name> <!--name of the gift card-->
+                        <from>Metabank</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$150</balance> <!--balance of the card-->
+                        <validity cardUsability="1 year">
+                            <manufactured_date>10/11/2020</manufactured_date>
+                            <expiry_date>10/11/2021</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers> <!--number of discount vouchers-->
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">2</rating>
+                        <desc>
+                            As one of the world’s most recognizable and trusted brands,
+                            Visa Gift Cards are the ideal gifts to give loved ones.
+                        </desc>
+                        <websiteAddress>http://www.metabank.com</websiteAddress>
+                        <email>metvis@nhs.net</email>
+                        <payment_type>Cash or Card</payment_type>
+                        <quantity>3</quantity>
+                        <refundable_within>1 month</refundable_within>  <!--refundability type-->
+                    </Card>
+                </physical>
+
+                <physical>
+                    <Card id="a12" giftOf="sto1">
+                        <name type="physical">Netflix gift card</name> <!--name of the gift card-->
+                        <from>Netflix</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$140</balance> <!--balance of the card-->
+                        <validity cardUsability="2 year">
+                            <manufactured_date>1/1/2020</manufactured_date>
+                            <expiry_date>1/1/2022</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <color>Red</color>
+                        <rating maxRating="5">5</rating>
+                        <desc>
+                            Once a Netflix gift card is applied to an account, you can watch Netflix
+                            until the gift card balance runs out or expires.
+                        </desc>
+                        <websiteAddress>http://www.netflix.com</websiteAddress>
+                        <email>net@nhs.net</email>
+                        <quantity>2</quantity> <!--quantity of the card-->
+                    </Card>
+                </physical>
+
+                <physical>
+                    <Card id="a13" giftOf="sto1">
+                        <name type="physical">Xbox gift card</name> <!--name of the gift card-->
+                        <from>Xbox</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$130</balance> <!--balance of the card-->
+                        <validity cardUsability="1 year">
+                            <manufactured_date>11/12/2020</manufactured_date>
+                            <expiry_date>11/12/2021</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <customize>
+                            <design>Pattern</design> <!--additional design for the card-->
+                        </customize> 
+                        <rating maxRating="5">2.5</rating>
+                        <desc>
+                            Give an xbox Gift Card for the ultimate gaming experience.
+                        </desc>
+                        <websiteAddress>http://www.ebay.com</websiteAddress>
+                        <email>ebbay@nhs.net</email>
+                        <payment_type>Cash or Card</payment_type>
+                        <quantity>3</quantity>
+                    </Card>
+                </physical>
+
+                <physical>
+                    <Card id="a14" giftOf="sto1">
+                        <name type="physical">Nintendo gift card</name> <!--name of the gift card-->
+                        <from>Nintendo</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$50.95</cost>
+                        <balance>$150</balance> <!--balance of the card-->
+                        <validity cardUsability="3 year">
+                            <manufactured_date>5/2/2020</manufactured_date>
+                            <expiry_date>5/2/2023</expiry_date>
+                        </validity>
+                        <number_of_users>5</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>25%</discounted_percentage>
+                        </discount_vouchers>
+                        <color>Blue</color>
+                        <rating maxRating="5">4</rating>
+                        <desc>
+                            Nintendo is the best gift you can give to you loved ones.
+                        </desc>
+                        <websiteAddress>http://www.bbuy.com</websiteAddress>
+                        <email>bbuy@nhs.net</email>
+                        <payment_type>Cash or Card</payment_type> <!--payment type for the gift card-->
+                        <quantity>1</quantity>
+                        <refundable_within>3 month</refundable_within> <!--card refundability time-->
+                    </Card>
+                </physical>
+
+                 <physical>
+                    <Card id="a15" giftOf="sto1">
+                        <name type="physical">IKEA gift card</name> <!--name of the gift card-->
+                        <from>IKEA</from>
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$40</cost>
+                        <balance>$110</balance> <!--balance of the card-->
+                        <validity cardUsability="1 year">
+                            <manufactured_date>8/11/2020</manufactured_date>
+                            <expiry_date>8/11/2021</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <rating maxRating="5">5</rating>
+                        <desc>
+                            The IKEA Gift Card is easy! Just pick the value of the card and you are free to get exactly what they want! 
+                        </desc>
+                        <websiteAddress>http://www.ikkea.com</websiteAddress>
+                        <email>ikkeaa@nhs.net</email>
+                        <quantity>5</quantity> <!--quantity of the card-->
+                    </Card>
+                </physical>
+
+                <physical>
+                    <Card id="a16" giftOf="sto1">
+                        <name type="physical">Subway gift card</name> <!--name of the gift card-->
+                        <from>Subway</from> <!--from whom the card is-->
+                        <type>Physical</type> <!--type of card-->
+                        <cost>$40</cost> <!--cost of card-->
+                        <balance>$100</balance> <!--balance of the card-->
+                        <validity cardUsability="2 year">
+                            <manufactured_date>12/12/2020</manufactured_date>
+                            <expiry_date>12/12/2021</expiry_date>
+                        </validity>
+                        <number_of_users>3</number_of_users>
+                        <discount_vouchers>
+                            <number_of_vouchers>1</number_of_vouchers>
+                            <discounted_percentage>20%</discounted_percentage>
+                        </discount_vouchers>
+                        <color>Brown</color>
+                         <customize>
+                            <design>Pattern</design> <!--additional design for the card-->
+                        </customize>
+                        <rating maxRating="5">3</rating>
+                        <desc>
+                            A Subway gift card is used for purchasing food and services at Subway
+                            restaurants in the United States, Canada, U.K
+                        </desc>
+                        <websiteAddress>http://www.suubway.com</websiteAddress>
+                        <email>subwayy@nhs.net</email>
+                        <quantity>4</quantity>
+                        <refundable_within>1 month</refundable_within> <!--card refundability time-->
+                    </Card>
+                </physical>
+
+        </Giftcard>
+</STORE>
+
+
+
+    
